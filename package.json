@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mdx-js/react": "^2.1.2",
+    "@styled-icons/material-outlined": "^10.34.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -72,5 +74,15 @@
     "core-js": "^3.0.1",
     "prop-types": "^15.8.1",
     "webpack": "^5.73.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/src/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/src/**/mock*.{js,jsx,ts,tsx}",
+      "!<rootDir>/src/styles/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/**/stories*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules"
+    ]
   }
 }
