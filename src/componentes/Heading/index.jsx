@@ -4,7 +4,7 @@ export const Heading =({
     children,
     colorDark = true,
      as = 'h1',
-     size = 'huge',
+     size = 'medium',
      uppercase =false,
     })=>{
     return <S.Wrapper colorDark ={colorDark} as={as} uppercase={uppercase} size={size}>{children}</S.Wrapper>

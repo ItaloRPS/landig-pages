@@ -24,11 +24,11 @@ const mediaFont = (theme) => css`
 }
 `;
 const titleCase = (uppercase) => css`
-text-transform:${uppercase?'upppercase' : 'none'};
+text-transform:${uppercase?'uppercase' : 'none'};
 `;
 
 export const Wrapper = styled.h1`
-${({theme,colorDark,size ='huge',uppercase})=> css`
+${({theme,colorDark, size , uppercase})=> css`
     color: ${colorDark?theme.color.primatyColor:theme.color.white};
     ${titleSizes[size](theme)}
     ${titleCase(uppercase)}

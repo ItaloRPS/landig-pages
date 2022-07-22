@@ -1,17 +1,18 @@
 import style, { css } from 'styled-components'
 
 const containerBackgroundActivate = (theme)=>css`
-   background: ${theme.colors.primaryColor};
-    color: ${theme.colors.white};
+   background: ${theme.color.primaryColor};
+    color: ${theme.color.white};
 `
 
 export const Container = style.div`
     ${({theme,background})=> css`
-    background: ${theme.colors.white};
-    color: ${theme.colors.primaryColor};
+    background: ${theme.color.white};
+    color: ${theme.color.primaryColor};
     ${background && containerBackgroundActivate(theme)}
     min-height: 100vh;
     display: flex;
     align-items: center;
+    padding: 5rem;
 `}
 `

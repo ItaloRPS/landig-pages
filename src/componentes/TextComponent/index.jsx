@@ -3,11 +3,11 @@ import * as S from './style'
 
 export const TextComponent = ({children}) =>{
      return (
-          <S.Container>{children}</S.Container>
+          <S.Container dangerouslySetInnerHTML={{__html:children}} />
      )
 }
 TextComponent.prototype = {
-     children: p.node.isRequired
+     children: p.string.isRequired
 }
 
 
