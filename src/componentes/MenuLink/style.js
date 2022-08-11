@@ -5,7 +5,7 @@ export const Container = style.a`
     text-decoration: none;
     font-size: ${theme.font.sizes.small};
     padding: ${theme.spacings.medium};
-    color: ${theme.color.primatyColor};
+    color: black;
     position: relative;
 
     &::after{

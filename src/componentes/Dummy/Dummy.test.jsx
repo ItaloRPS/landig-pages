@@ -3,8 +3,8 @@ import { Dummy } from "."
 import { renderTheme } from "../../styles/render-theme"
 
 describe('<Dummy/>',()=>{
-    test('shold render',()=>{
+    test('shold render Dummy',()=>{
         renderTheme(<Dummy>Children</Dummy>);
-        expect(screen.getAllByRole('heading')).toBeInTheDocument()
+        expect(screen.getByText('Children')).toBeInTheDocument()
     });
 });
