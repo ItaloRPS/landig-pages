@@ -1,4 +1,4 @@
-import { screen } from '@storybook/testing-library';
+import { screen } from '@testing-library/react';
 import {renderTheme} from '../../styles/render-theme'
 import {NavLinks} from '.'
 import mock from './mock'
@@ -20,7 +20,7 @@ describe('<NavLinks/>',()=>{
         expect(screen.getByText('Link1').parentElement).
         toHaveStyleRule(
             'flex-flow', 
-            'column wrap;',
+            'column wrap',
             {
                 media:theme.media.lteMedium,
             }

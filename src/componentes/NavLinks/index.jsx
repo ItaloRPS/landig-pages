@@ -14,8 +14,8 @@ export const NavLinks = ({links = []}) =>{
 }
 NavLinks.prototype = {
      links: p.arrayOf({
-        children: p.string.isRequired,
-        link:p.string.isRequired,
+        children: p.string,
+        link:p.string,
         newTab: p.bool
      })
 }

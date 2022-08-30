@@ -1,18 +1,18 @@
-import p from 'prop-types'
-import { TextComponent } from '../TextComponent'
-import { SectionContainner } from '../SectionContainner'
-import * as S from './style'
+import P from 'prop-types';
+import * as Styled from './style';
+import { TextComponent } from '../TextComponent';
+import { SectionContainner } from '../SectionContainner';
 
-export const Footer = ({footerHtml}) =>{
-     return (
-        <S.Container>
-            <SectionContainner></SectionContainner>
-          <TextComponent>
-                {footerHtml}
-            </TextComponent>
-        </S.Container>
-        )
-}
-Footer.prototype = {
-    footerHtml: p.string.isRequired
-}
+export const Footer = ({ footerHtml }) => {
+  return (
+    <Styled.Container>
+      <SectionContainner>
+        <TextComponent>{footerHtml}</TextComponent>
+      </SectionContainner>
+    </Styled.Container>
+  );a
+};
+
+Footer.propTypes = {
+  footerHtml: P.string.isRequired,
+};

@@ -1,10 +1,9 @@
-import { screen } from '@storybook/testing-library';
+import { screen } from '@testing-library/react';
 import {renderTheme} from '../../styles/render-theme'
 import {Footer} from '.'
 describe('<Footer/>',()=>{
-    test('shold render',()=>{
-    const {container} = renderTheme(<Footer html={'<h1>Ola</h1>'}/>);
-    expect(screen.getAllByRole('heading',{name:'Ola'})).toBeInTheDocument()
-    expect(container).toMatchInlineSnapshot()
+    it('should render', () => {
+        renderTheme(<Footer footerHtml={'<h1>Olá</h1>'} />);
+        expect(screen.getByRole('heading', { name: 'Olá' })).toBeInTheDocument();
     });
 });

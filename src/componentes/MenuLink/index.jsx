@@ -9,7 +9,7 @@ export const MenuLink = ({children,link,newTab}) =>{
      )
 }
 MenuLink.prototype = {
-     children: p.node.isRequired,
+     children: p.string.isRequired,
      link:p.string.isRequired,
      newTab:p.bool
 }
