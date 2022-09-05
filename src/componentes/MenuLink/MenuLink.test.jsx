@@ -10,9 +10,18 @@ describe('<MenuLink/>',()=>{
           '_self',
         );
       });
+
+      
     
-    test('shold render open in new tab',()=>{
-        renderTheme(<MenuLink link='http://localhost' newTabe={true}>Children</MenuLink>);
-        expect(screen.getAllByRole('link',{name:'Children'})).toMatchInlineSnapshot();
-    });
+      test('should render open in a new tab', () => {
+        renderTheme(
+          <MenuLink link="http://localhost" newTab={true}>
+            Children
+          </MenuLink>,
+        );
+        expect(screen.getByRole('link', { name: 'Children' })).toHaveAttribute(
+          'target',
+          '_blank',
+        );
+      });
 });

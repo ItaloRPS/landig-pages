@@ -1,15 +1,17 @@
-import p from 'prop-types'
-import * as S from './style'
+import P from 'prop-types';
+import * as S from './style';
 
-export const MenuLink = ({children,link,newTab}) =>{
-     const target =  newTab?'_blank':'_self'
-     return (
+export const MenuLink = ({ children, link, newTab = false }) => {
+  const target = newTab ? '_blank' : '_self';
+  return (
+    <S.Container href={link} target={target}>
+      {children}
+    </S.Container>
+  );
+};
 
-          <S.Container href={link} target={target}>{children}</S.Container>
-     )
-}
-MenuLink.prototype = {
-     children: p.string.isRequired,
-     link:p.string.isRequired,
-     newTab:p.bool
-}
+MenuLink.propTypes = {
+  children: P.node.isRequired,
+  link: P.string.isRequired,
+  newTab: P.bool,
+};
