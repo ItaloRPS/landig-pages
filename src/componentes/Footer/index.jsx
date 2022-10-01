@@ -10,7 +10,7 @@ export const Footer = ({ footerHtml }) => {
         <TextComponent>{footerHtml}</TextComponent>
       </SectionContainner>
     </Styled.Container>
-  );a
+  );
 };
 
 Footer.propTypes = {

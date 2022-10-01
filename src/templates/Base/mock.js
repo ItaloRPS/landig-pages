@@ -2,7 +2,7 @@ import linksMock from '../../componentes/NavLinks/mock'
 import gridMock from '../../componentes/GridSection/mock'
 import {GridSection} from '../../componentes/GridSection'
 
-export const mocBase = {
+export const mockBase = {
     children:(
         <>
             <GridSection {...gridMock}/>

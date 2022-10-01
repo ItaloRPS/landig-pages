@@ -7,7 +7,7 @@ export const Heading =({
      size = 'medium',
      uppercase =false,
     })=>{
-    return <S.Wrapper colorDark ={colorDark} as={as} uppercase={uppercase} size={size}>{children}</S.Wrapper>
+    return <S.Title colorDark ={colorDark} as={as} uppercase={uppercase} size={size}>{children}</S.Title>
 }
 
 Heading.prototype ={
