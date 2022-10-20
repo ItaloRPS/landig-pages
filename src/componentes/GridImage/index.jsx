@@ -4,11 +4,11 @@ import * as S from './style'
 import {SectionBackground} from '../SectionBackground'
 import {Heading} from '../Heading'
 
-export const GridImage = ({title, description, grid, background}) =>{
+export const GridImage = ({title, description, grid, background,sectionId=''}) =>{
      return (
-     <SectionBackground background={background} as='h2'>
+     <SectionBackground background={background} sectionId={sectionId}>
           <S.Container>
-              <Heading uppercase size='huge'>{title}</Heading>
+              <Heading uppercase size='huge' as='h2'>{title}</Heading>
               <S.Grid>
                   {grid.map((el) =>(
                       <S.GridElement key={el.altText}>
@@ -30,5 +30,6 @@ GridImage.prototype = {
          altText:p.string.isRequired,
          srcImg:p.string.isRequired
 
-    })).isRequired
+    })).isRequired,
+    sectionId:p.string
 }

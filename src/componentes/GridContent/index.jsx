@@ -5,11 +5,11 @@ import {SectionBackground} from '../SectionBackground'
 import { Heading } from '../Heading'
 import { TextComponent } from '../TextComponent'
 
-export const GridContent = ({title, html, background = false}) =>{
+export const GridContent = ({title, html, background = false , sectionId=''}) =>{
      return (
-          <SectionBackground background={background} as='h2'>
+          <SectionBackground background={background} sectionId={sectionId}>
                <S.Container>
-                    <Heading uppercase colorDark={!background}>
+                    <Heading uppercase colorDark={!background} as='h2'>
                          {title}
                     </Heading>
                     <S.Hmtl>
@@ -22,5 +22,6 @@ export const GridContent = ({title, html, background = false}) =>{
 GridContent.prototype = {
      title:p.string.isRequired,
      html:p.string.isRequired,
-     background: p.bool
+     background: p.bool,
+     sectionId:p.string
 }

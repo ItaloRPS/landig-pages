@@ -30,4 +30,8 @@ ul,ol{
 a{
     color:${({theme})=>  theme.color.secondaryColor} ;
 }
+.table{
+    width: 100%;
+    overflow-y: auto;
+}
 `;

@@ -9,7 +9,7 @@ export const Container = style.a`
     font: ${theme.font.family.secondary};
     
     > img{
-        max-height: 2.5rem;
+        height: 2.5rem;
     }
 
 `}

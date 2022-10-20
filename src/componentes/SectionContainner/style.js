@@ -4,5 +4,6 @@ export const Container = style.div`
     max-width: 120rem;
     margin: 0 auto;
     padding: ${theme.spacings.large};
+    width: 100%;
 `}
 `
