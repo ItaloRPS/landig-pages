@@ -2,14 +2,14 @@ import { mapMenu } from "./map.menu"
 import { mapSections } from "./map-section"
 
 export const mapData = (pagesData= [{}]) => {
-    return pagesData.map((data) => {
+    return pagesData.data.map((data) => {
         const {
             footer_text:footerHtml = '',
             slug ='',
             title ='',
             sections =[],
             menu  = {}
-        } = data;
+        } = data.attributes;
 
         return{
             footerHtml,

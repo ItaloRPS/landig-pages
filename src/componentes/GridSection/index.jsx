@@ -5,9 +5,9 @@ import {SectionBackground} from '../SectionBackground'
 import {Heading} from '../Heading'
 import {TextComponent} from '../TextComponent'
 
-export const GridSection = ({title, description, grid, background}) =>{
+export const GridSection = ({title, description, grid, background,sectionId}) =>{
      return (
-        <SectionBackground background={background} as='h2'>
+        <SectionBackground background={background} as='h2' sectionId={sectionId}>
             <S.Container>
                 <Heading uppercase size='huge'>{title}</Heading>
                 <TextComponent>{description}</TextComponent>

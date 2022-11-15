@@ -16,7 +16,7 @@ export const GridImage = ({title, description, grid, background,sectionId=''}) =
                       </S.GridElement>
                   ))}
               </S.Grid>
-          </S.Container>u
+          </S.Container>
       </SectionBackground>
    )
      
